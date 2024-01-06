@@ -6,7 +6,7 @@ import pendulum
 with DAG(
    dag_id="dags_bash_operator", # airflow 처음 들어왔을 때 화면에서 보이는 DAG 이름(파이썬 파일명이랑 상관없음), 일반적으로  파일명과 일치시켜주는 것이 좋음 
    schedule="0 0 * * *", # cron (분 시 일 월 요일)
-   start_date=pendulum.datetime(2024, 3, 1, tz="Asia/Seoul"),
+   start_date=pendulum.datetime(2024, 1, 1, tz="Asia/Seoul"),
    catchup=False, # start_date와 같이, 현재가 3월 1일일때 1월 1일 부터 3월 1일까지의 데이터를 돌릴 것인지 설정 (기본적으로 False로 설정)
    #dagrun_timeout=datetime.timedelta(minutes=60), # DAG이 60분 이상 돌면 실패하도록 설정
    #tags=["example", "example2"], # 화면에서 파란색 박스, 태그를 눌렀을 때 카테고리화 해서 볼 수 있음
