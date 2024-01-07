@@ -12,12 +12,12 @@ with DAG(
     
     t1_orange = BashOperator(
         task_id="t1_orange",
-        bash_command="/opt/airflow/plugins/shell/select_fruit.sh ORANGE", #Task 를 수행하는 주체가 도커이기 때문에
+        bash_command="/opt/airflow/plugins/shell/selected_fruit.sh ORANGE", #Task 를 수행하는 주체가 도커이기 때문에
     )
 
     t2_avocado = BashOperator(
         task_id="t2_avocado",
-        bash_command="/opt/airflow/plugins/shell/select_fruit.sh AVOCADO",
+        bash_command="/opt/airflow/plugins/shell/selected_fruit.sh AVOCADO",
     )
 
     t1_orange >> t2_avocado
