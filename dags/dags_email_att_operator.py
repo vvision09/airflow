@@ -12,10 +12,10 @@ import os
 def send_email_with_attachment():
     msg = MIMEMultipart()
     msg['From'] = 'vision.io09o@gmail.com'
-    msg['To'] = 'jlkh618@naver.com'
-    msg['Subject'] = '[TEST] 말랑이에게'
+    msg['To'] = '보낼이메일@naver.com'
+    msg['Subject'] = '[TEST] 제목'
 
-    body = '꾸락말랑'
+    body = '내용'
     msg.attach(MIMEText(body, 'plain'))
 
     filename = '/opt/airflow/plugins/shell/test.txt'
@@ -32,7 +32,7 @@ def send_email_with_attachment():
     server.starttls()
     server.login('vision.io09o@gmail.com', 'ztuz gfpb lnfc mecb')
     text = msg.as_string()
-    server.sendmail('vision.io09o@gmail.com', 'jlkh618@naver.com', text)
+    server.sendmail('vision.io09o@gmail.com', '이메일.com', text)
     server.quit()
 
 with DAG(
