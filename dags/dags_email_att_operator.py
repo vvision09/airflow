@@ -17,7 +17,7 @@ def send_email_with_attachment():
     body = '꾸락말랑'
     msg.attach(MIMEText(body, 'plain'))
 
-    filename = '../venv/test.txt'
+    filename = '/Users/ltg/vscode/airflow/venv/test.txt'
     attachment = open(filename, 'rb')
 
     part = MIMEBase('application', 'octet-stream')
@@ -44,3 +44,5 @@ with DAG(
         task_id='send_email_task',
         python_callable=send_email_with_attachment
     )
+
+    
