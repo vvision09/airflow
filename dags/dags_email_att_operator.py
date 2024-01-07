@@ -17,7 +17,7 @@ def send_email_with_attachment():
     body = '꾸락말랑'
     msg.attach(MIMEText(body, 'plain'))
 
-    filename = '/Users/ltg/vscode/airflow/venv/test.txt'
+    filename = '/opt/airflow/plugins/shell/test.txt'
     attachment = open(filename, 'rb')
 
     part = MIMEBase('application', 'octet-stream')
