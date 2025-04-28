@@ -18,7 +18,7 @@ with DAG(
     )
 
     bash_t2 = BashOperator(
-        task_id = 'bash_t1' # 객체명과 task id는 일치하는게 좋다
+        task_id = 'bash_t2' # 객체명과 task id는 일치하는게 좋다
         ,bash_command = 'echo $HOSTNAME'
     )
 
